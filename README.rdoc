@@ -5,23 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - ruby 2.3.1
 
-* System dependencies
+* Rails version - Rails 4.2.6
 
-* Configuration
+* Database creation - Sqlite3
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Added gem's - gem 'spree', '~> 3.1.0'
+				gem 'spree_auth_devise', '~> 3.1.0'
+				gem 'spree_gateway', '~> 3.1.0'
+				gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-1-stable'
+				gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch:'3-1-stable'
+				gem 'spree_social', github: 'spree-contrib/spree_social', branch: '3-1-stable'
 
 
 Please feel free to use a different markup language if you do not plan to run
