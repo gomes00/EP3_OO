@@ -11,12 +11,14 @@ Things you may want to cover:
 
 * Database creation - Sqlite3
 
-* Added gem's - gem 'spree', '~> 3.1.0'
-				gem 'spree_auth_devise', '~> 3.1.0'
-				gem 'spree_gateway', '~> 3.1.0'
-				gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-1-stable'
-				gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch:'3-1-stable'
-				gem 'spree_social', github: 'spree-contrib/spree_social', branch: '3-1-stable'
+* Added gem's 
+
+gem 'spree', '~> 3.1.0'
+gem 'spree_auth_devise', '~> 3.1.0'
+gem 'spree_gateway', '~> 3.1.0'
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '3-1-stable'
+gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch: '3-1-stable'
+gem 'spree_social', github: 'spree-contrib/spree_social', branch: '3-1-stable'
 
 ----
 
@@ -31,36 +33,39 @@ rails db:create
 
 coloque as gem's acima no Gemfile e rode o <tt>bundle install</tt>
 
-rode os generates do Spree e o instalador do i18n 
-<tt>
-rails g spree:install --user_class=Spree::User
-rails g spree:auth:install
-rails g spree_gateway:install
-bundle exec rails g spree_i18n:install
-</tt>
+rode os generates do Spree e o instalador do i18n
+
+
+<tt>rails g spree:install --user_class=Spree::User</tt>
+<tt>rails g spree:auth:install</tt>
+<tt>rails g spree_gateway:install</tt>
+<tt>bundle exec rails g spree_i18n:install</tt>
+
 
 coloque isso na pasta “config/initializers/spree.rb” 
-<tt>
-Spree::Frontend::Config[:locale] = 'pt-BR'
-Spree::Backend::Config[:locale] = 'pt-BR
-</tt>
+
+<tt>Spree::Frontend::Config[:locale] = 'pt-BR'</tt>
+<tt>Spree::Backend::Config[:locale] = 'pt-BR'</tt>
+
 para mudar a cor e o logo, crie essa pasta “vendor/assets/stylesheets/spree/frontend/bar_color.css” e coloque:
-<tt>
+
+
 #spree-header{
     background: gray;
 }
 #spree-header #logo img {
     width: 37%;
 }
-</tt>
+
 para colocar o autenticador do facebook, rode o instalador
-<tt>
-bundle exec rails g spree_social:install
-</tt>
+
+
+<tt>bundle exec rails g spree_social:install</tt>
+
 
 entre como administrador na aplicação, em configurações > metodos de autenticação
 e crie um autenticador padrao para facebook
--qualquer duvida ir para <a href = "https://github.com/spree-contrib/spree_social"></a>
+-qualquer duvida ir para https://github.com/spree-contrib/spree_social
 
 
 
